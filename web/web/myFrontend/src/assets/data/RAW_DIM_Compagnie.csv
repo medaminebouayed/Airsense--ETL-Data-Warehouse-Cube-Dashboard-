@@ -1,0 +1,15 @@
+compagnie_id,nom,code_IATA,pays,alliance,taille
+1,Air France,AF,France,SkyTeam,grande
+2,Emirates,EK,Émirats,Aucune,grande
+3,Lufthansa,LH,Allemagne,StarAlliance,grande
+4,Tunisair,TU,Tunisie,Aucune,moyenne
+5,Turkish Airlines,TK,Turquie,StarAlliance,grande
+6,British Airways,BA,Royaume-Uni,,grande
+7,Qatar Airways,QR,Qatar,Oneworld,grande
+8,Delta Air Lines,DL,États-Unis,SkyTeam,grande
+9,Ryanair,FR,Irlande,Aucune,moyenne
+10,EASYJET,U2,Royaume-Uni,Aucune,moyenne
+3,lufthansa,lh,allemagne,staralliance,grande
+9,RYANAIR,FR,Irlande,Aucune,moyenne
+11,,XX,Inconnu,,petite
+12,FlyMed,,Tunisie,Aucune,

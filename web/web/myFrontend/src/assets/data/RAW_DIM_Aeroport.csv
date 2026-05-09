@@ -1,0 +1,13 @@
+aeroport_id,nom,code_IATA,ville,pays,latitude,longitude,taille
+1,Charles de Gaulle,CDG,Paris,France,49.0097,2.5479,grand
+2,Dubai International,DXB,Dubai,Émirats,25.2532,55.3657,grand
+3,Frankfurt Airport,FRA,Francfort,Allemagne,50.0379,8.5622,
+4,Tunis-Carthage,TUN,Tunis,Tunisie,36.851,10.2272,moyen
+5,Istanbul Airport,IST,,Turquie,41.2753,28.7519,grand
+6,Heathrow,LHR,Londres,Royaume-Uni,51.47,-0.4543,grand
+7,Doha Hamad,DOH,Doha,Qatar,25.2731,51.6081,grand
+8,JFK International,JFK,New York,États-Unis,40.6413,-73.7781,grand
+9,Rome Fiumicino,FCO,Rome,Italie,41.8003,12.2389,grand
+10,Madrid Barajas,MAD,Madrid,Espagne,40.4719,-3.5626,grand
+11,Amsterdam Schiphol,AMS,Amsterdam,Pays-Bas,52.3086,4.7639,grand
+12,Casablanca Mohamed V,CMN,Casablanca,Maroc,33.3675,N/A,moyen

@@ -1,0 +1,141 @@
+<div class="dashboard-container">
+  <header class="dashboard-header">
+    <h1>Airsense Dashboard</h1>
+    <p>Real-time analytics for flight operations</p>
+  </header>
+
+  <div class="status-row" *ngIf="loading || !!error">
+    <span class="status-badge loading" *ngIf="loading">Chargement des données…</span>
+    <span class="status-badge error" *ngIf="error">{{ error }}</span>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <h3>Total des vols</h3>
+      <div class="kpi-value">{{ (kpis.totalFlights | number:'1.0-0') || '—' }}</div>
+      <div class="kpi-trend">
+        Top: {{ kpis.topFlights?.label || '—' }} ({{ (kpis.topFlights?.value | number:'1.0-0') || '—' }})
+      </div>
+    </div>
+
+    <div class="kpi-card">
+      <h3>Incidents enregistrés</h3>
+      <div class="kpi-value">{{ (kpis.totalIncidents | number:'1.0-0') || '—' }}</div>
+      <div class="kpi-trend">
+        Top: {{ kpis.topIncidents?.libelle || '—' }} ({{ (kpis.topIncidents?.count_incidents | number:'1.0-0') || '—' }})
+      </div>
+    </div>
+
+    <div class="kpi-card">
+      <h3>Ponctualité (dernier mois)</h3>
+      <div class="kpi-value">{{ (kpis.latestPunctuality?.value | percent:'1.0-1') || '—' }}</div>
+      <div class="kpi-trend">
+        <ng-container *ngIf="kpis.latestPunctuality as p; else noMonth">
+          {{ p.month }}
+          <span
+            class="delta"
+            *ngIf="kpis.punctualityDelta !== null"
+            [class.positive]="kpis.punctualityDelta! >= 0"
+            [class.negative]="kpis.punctualityDelta! < 0"
+          >
+            <ng-container *ngIf="kpis.punctualityDelta! >= 0; else deltaNeg">↑</ng-container>
+            <ng-template #deltaNeg>↓</ng-template>
+            {{ (kpis.punctualityDelta! | percent:'1.0-1') || '—' }}
+          </span>
+        </ng-container>
+        <ng-template #noMonth>—</ng-template>
+      </div>
+    </div>
+
+    <div class="kpi-card">
+      <h3>Coût total (USD)</h3>
+      <div class="kpi-value">{{ (kpis.totalCostUsd | currency:'USD':'symbol':'1.0-0') || '—' }}</div>
+      <div class="kpi-trend">Somme des coûts par cause</div>
+    </div>
+
+    <div class="kpi-card">
+      <h3>Passagers affectés</h3>
+      <div class="kpi-value">{{ (kpis.totalPassengersAffected | number:'1.0-0') || '—' }}</div>
+      <div class="kpi-trend">Somme des passagers par cause</div>
+    </div>
+
+    <div class="kpi-card">
+      <h3>Retard moyen</h3>
+      <div class="kpi-value">{{ (kpis.avgDelayMin | number:'1.0-0') || '—' }} min</div>
+      <div class="kpi-trend">Moyenne par condition météo</div>
+    </div>
+  </div>
+
+  <div class="charts-grid">
+    <div class="chart-card">
+      <div class="chart-header">
+        <h2>Vols par dimension</h2>
+        <select [value]="dimension" (change)="onDimensionChange($event)" class="dimension-select">
+          <option value="aeroport">Aéroport</option>
+          <option value="compagnie">Compagnie</option>
+        </select>
+      </div>
+      <canvas id="flightsChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>Incidents par type</h2>
+      <canvas id="incidentsChart"></canvas>
+    </div>
+
+    <div class="chart-card full-width">
+      <h2>Performance (ponctualité) au fil du temps</h2>
+      <canvas id="performanceChart"></canvas>
+    </div>
+
+    <div class="chart-card full-width">
+      <h2>Impact financier des retards</h2>
+      <canvas id="financialImpactChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>Météo vs ponctualité</h2>
+      <canvas id="weatherChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>Top 10 compagnies</h2>
+      <canvas id="topPerformersChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>Annulations par saison</h2>
+      <canvas id="cancellationsChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>Sévérité des incidents</h2>
+      <canvas id="severityChart"></canvas>
+    </div>
+
+    <div class="chart-card full-width">
+      <h2>Retards par cause</h2>
+      <canvas id="delaysChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>Top 10 compagnies par distance</h2>
+      <canvas id="distanceChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>Heures d'immobilisation par incident</h2>
+      <canvas id="immobilizationChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>Vols par condition météo</h2>
+      <canvas id="weatherFlightsChart"></canvas>
+    </div>
+
+    <div class="chart-card full-width">
+      <h2>Volume de vols par jour de la semaine</h2>
+      <canvas id="flightsByDayChart"></canvas>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+type_id,libelle,categorie,gravite_max
+1,Panne moteur,,5
+2,Décompression cabine,SECURITE,8
+3,Oise@u d@ns ré@cteur,EXTERNE,4
+4,Feu à bord,,10
+5,Problème hydraulique,TECHNIQUE,6
+6,Incident train atterr.,TECHNIQUE,-7
+7,Turbulences graves,METEO,3
+8,Fumée en cabine,SECURITE,9
+9,Passager incontrôlable,PASSAGER,2
+10,Dépressurisation,SECURITE,8
