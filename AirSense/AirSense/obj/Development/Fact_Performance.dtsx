@@ -1,0 +1,3427 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/22/2026 3:30:26 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="AMINE"
+  DTS:CreatorName="AMINE\amine"
+  DTS:DTSID="{DA6B3B06-FDB1-4B9C-BAA9-DCE9BC7180B8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1008.3"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{53291E6D-B7AD-41F3-9368-9BA25ECBB1CA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EFFEDD90-FB70-4CD2-9633-3FBA07AB50E7}"
+      DTS:ObjectName="AMINE\MSSQLSERVER1.AirSense.SA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=AMINE\MSSQLSERVER1;User ID=SA;Initial Catalog=AirSense;Provider=SQLOLEDB.1;Application Name=SSIS-Package1-{EFFEDD90-FB70-4CD2-9633-3FBA07AB50E7}AMINE\MSSQLSERVER1.AirSense.SA;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAyDlRsuH3IkG+Gngl7StQLQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACYMZCbDQmr+HWvDjTug2XPcqIAMu9s66zV7C/NUbWesAAAAAAOgAAAAAIAACAAAACovLD84dlZXvSwjzWZywZGEwLtR0VUU4XVGShSIQHUnBAAAABs8tSoeSGejfdDUSBvZK7+QAAAANBfLNPdkpRBiCEVnj6N8Qfln4t1RVbfVrSiTJKG0L10ySI8UJLWY3gsz8LS52/YajJBlVoH2wS0qNp+5ZlGOow</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Performance Input Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{614E97A9-ECE1-4A8E-89CC-E581744F30FC}"
+      DTS:ObjectName="Flat File Performance Input Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\amine\OneDrive\Desktop\SoftwareEngenering\ING2\sem2\Business Intelligence\ProjetBI\data\RAW_FACT_Performance.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="perf_id"
+              DTS:DTSID="{D5559FAF-F8AB-4615-9044-AB687D17ABDA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="date_id"
+              DTS:DTSID="{2EECB3E9-937E-44D6-A64E-78CFDB01F723}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="compagnie_id"
+              DTS:DTSID="{E042425E-88E1-4425-AD0C-BE65EE4BBB90}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="aeroport_id"
+              DTS:DTSID="{4138F5AD-DD7C-4930-86E5-6BD0D1BC3C07}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nb_vols_total"
+              DTS:DTSID="{67C240F4-2852-4F59-984E-5C5D76301379}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="taux_ponctualite"
+              DTS:DTSID="{DF5FB2BB-C790-4853-95D9-3D216678E77F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="taux_annulation"
+              DTS:DTSID="{501F11D8-CB0C-49AE-BC88-ED8D80F4B745}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="retard_moyen_min"
+              DTS:DTSID="{F365707D-CF11-47C9-B008-02EC144BED65}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="satisfaction_score"
+              DTS:DTSID="{C78FE5B4-A242-4E37-AB70-BDC18FADED4E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="revenus_estimes_usd"
+              DTS:DTSID="{D10CC6FF-A27D-47E4-AF45-00A511814641}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Performance Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{dc94949d-5053-4a40-9dc8-faa204ef3ace}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Performance Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Performance Flow Task\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Performance Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[perf_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="perf_id_clean"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[perf_id_clean]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[date_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="date_id_clean"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[date_id_clean]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[compagnie_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="compagnie_id_clean"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[compagnie_id_clean]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[aeroport_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="aeroport_id_clean"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[aeroport_id_clean]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[IsErrorRow]"
+                      cachedDataType="bool"
+                      cachedName="IsErrorRow"
+                      lineageId="Package\Performance Flow Task\Script Component.Outputs[error].Columns[IsErrorRow]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Performance Flow Task\Conditional Split.Outputs[Lignes_Valides]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lignes_Valides"
+                  synchronousInputId="Package\Performance Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Performance Flow Task\Script Component.Outputs[error].Columns[IsErrorRow]} ==  FALSE  &amp;&amp; ![ISNULL](#{Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[perf_id_clean]}) &amp;&amp; ![ISNULL](#{Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[date_id_clean]}) &amp;&amp; ![ISNULL](#{Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[compagnie_id_clean]}) &amp;&amp; ![ISNULL](#{Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[aeroport_id_clean]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">IsErrorRow ==  FALSE  &amp;&amp; !ISNULL(perf_id_clean) &amp;&amp; !ISNULL(date_id_clean) &amp;&amp; !ISNULL(compagnie_id_clean) &amp;&amp; !ISNULL(aeroport_id_clean)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Performance Flow Task\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Performance Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Performance Flow Task\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Performance Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Performance Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Performance Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Performance Flow Task\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Performance Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Inputs[Derived Column Input].Columns[perf_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="perf_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[perf_id]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Inputs[Derived Column Input].Columns[date_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="date_id"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[date_id]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Inputs[Derived Column Input].Columns[compagnie_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="compagnie_id"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[compagnie_id]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Inputs[Derived Column Input].Columns[aeroport_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="aeroport_id"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[aeroport_id]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Inputs[Derived Column Input].Columns[taux_annulation]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="taux_annulation"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[taux_annulation]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Inputs[Derived Column Input].Columns[retard_moyen_min]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="retard_moyen_min"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[retard_moyen_min]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Inputs[Derived Column Input].Columns[satisfaction_score]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="satisfaction_score"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[satisfaction_score]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Performance Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[perf_id_clean]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[perf_id_clean]"
+                      name="perf_id_clean"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[perf_id]}) ? NULL(DT_I4) : (DT_I4)#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[perf_id]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(perf_id) ? NULL(DT_I4) : (DT_I4)perf_id</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[date_id_clean]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[date_id_clean]"
+                      name="date_id_clean"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[date_id]}) || [TRIM](#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[date_id]}) == "" ? NULL(DT_I4) : (DT_I4)#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[date_id]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(date_id) || TRIM(date_id) == "" ? NULL(DT_I4) : (DT_I4)date_id</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[compagnie_id_clean]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[compagnie_id_clean]"
+                      name="compagnie_id_clean"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[compagnie_id]}) || [TRIM](#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[compagnie_id]}) == "" ? NULL(DT_I4) : (DT_I4)#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[compagnie_id]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(compagnie_id) || TRIM(compagnie_id) == "" ? NULL(DT_I4) : (DT_I4)compagnie_id</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[aeroport_id_clean]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[aeroport_id_clean]"
+                      name="aeroport_id_clean"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[aeroport_id]}) || [TRIM](#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[aeroport_id]}) == "" ? NULL(DT_I4) : (DT_I4)#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[aeroport_id]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(aeroport_id) || TRIM(aeroport_id) == "" ? NULL(DT_I4) : (DT_I4)aeroport_id</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[taux_annul_clean]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[taux_annul_clean]"
+                      name="taux_annul_clean"
+                      precision="29"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[taux_annulation]}) || [TRIM](#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[taux_annulation]}) == "" ? NULL(DT_DECIMAL,4) : (DT_DECIMAL,4)#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[taux_annulation]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(taux_annulation) || TRIM(taux_annulation) == "" ? NULL(DT_DECIMAL,4) : (DT_DECIMAL,4)taux_annulation</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[retard_clean]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[retard_clean]"
+                      name="retard_clean"
+                      precision="29"
+                      scale="1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[retard_moyen_min]}) || [TRIM](#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[retard_moyen_min]}) == "" ? NULL(DT_DECIMAL,1) : (DT_DECIMAL,1)#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[retard_moyen_min]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(retard_moyen_min) || TRIM(retard_moyen_min) == "" ? NULL(DT_DECIMAL,1) : (DT_DECIMAL,1)retard_moyen_min</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[satisfaction_clean]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[satisfaction_clean]"
+                      name="satisfaction_clean"
+                      precision="29"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[satisfaction_score]}) || [TRIM](#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[satisfaction_score]}) == "" || (DT_DECIMAL,2)#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[satisfaction_score]} == 0 ? NULL(DT_DECIMAL,2) : (DT_DECIMAL,2)#{Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[satisfaction_score]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(satisfaction_score) || TRIM(satisfaction_score) == "" || (DT_DECIMAL,2)satisfaction_score == 0 ? NULL(DT_DECIMAL,2) : (DT_DECIMAL,2)satisfaction_score</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Performance Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Performance Flow Task\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Performance Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Performance Input Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Performance Input Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[perf_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[perf_id]"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[perf_id]"
+                      name="perf_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[date_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[date_id]"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[date_id]"
+                      name="date_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[compagnie_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[compagnie_id]"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[compagnie_id]"
+                      name="compagnie_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[aeroport_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[aeroport_id]"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[aeroport_id]"
+                      name="aeroport_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[nb_vols_total]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[nb_vols_total]"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[nb_vols_total]"
+                      name="nb_vols_total"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[taux_ponctualite]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[taux_ponctualite]"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[taux_ponctualite]"
+                      name="taux_ponctualite"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[taux_annulation]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[taux_annulation]"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[taux_annulation]"
+                      name="taux_annulation"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[retard_moyen_min]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[retard_moyen_min]"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[retard_moyen_min]"
+                      name="retard_moyen_min"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[satisfaction_score]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[satisfaction_score]"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[satisfaction_score]"
+                      name="satisfaction_score"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[revenus_estimes_usd]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[revenus_estimes_usd]"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[revenus_estimes_usd]"
+                      name="revenus_estimes_usd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[perf_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="perf_id" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[date_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="date_id" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[compagnie_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="compagnie_id" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[aeroport_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="aeroport_id" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[nb_vols_total]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="nb_vols_total" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[taux_ponctualite]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="taux_ponctualite" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[taux_annulation]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="taux_annulation" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[retard_moyen_min]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="retard_moyen_min" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[satisfaction_score]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="satisfaction_score" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[revenus_estimes_usd]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="revenus_estimes_usd" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Performance Flow Task\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Compagnie]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Compagnie]) [refTable]
+where [refTable].[compagnie_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="compagnie_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nom" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="code_IATA" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="alliance" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="pays_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="taille_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[compagnie_id_clean]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Performance Flow Task\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Performance Flow Task\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Lookup.Inputs[Lookup Input].Columns[compagnie_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="compagnie_id_clean"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[compagnie_id_clean]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">compagnie_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Performance Flow Task\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Performance Flow Task\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Lookup.Outputs[Lookup Match Output].Columns[compagnie_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Performance Flow Task\Lookup.Outputs[Lookup Match Output].Columns[compagnie_id]"
+                      name="compagnie_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">compagnie_id</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Performance Flow Task\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Performance Flow Task\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Performance Flow Task\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Performance Flow Task\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Performance Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Performance Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Performance Flow Task\Lookup 1"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup 1"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Aeroport]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Aeroport]) [refTable]
+where [refTable].[aeroport_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="aeroport_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nom" dataType="DT_WSTR" length="150" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="code_IATA" dataType="DT_WSTR" length="5" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ville" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="latitude" dataType="DT_NUMERIC" length="0" precision="9" scale="6" codePage="0"/&gt;&lt;referenceColumn name="longitude" dataType="DT_NUMERIC" length="0" precision="9" scale="6" codePage="0"/&gt;&lt;referenceColumn name="pays_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="taille_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[aeroport_id_clean]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Performance Flow Task\Lookup 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Performance Flow Task\Lookup 1.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Lookup 1.Inputs[Lookup Input].Columns[aeroport_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="aeroport_id_clean"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[aeroport_id_clean]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">aeroport_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Performance Flow Task\Lookup 1.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Performance Flow Task\Lookup 1.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Lookup 1.Outputs[Lookup Match Output].Columns[aeroport_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Performance Flow Task\Lookup 1.Outputs[Lookup Match Output].Columns[aeroport_id]"
+                      name="aeroport_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">aeroport_id</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Performance Flow Task\Lookup 1.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Performance Flow Task\Lookup 1.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Performance Flow Task\Lookup 1.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Performance Flow Task\Lookup 1.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Performance Flow Task\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Performance Flow Task\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Performance Flow Task\Lookup 2"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup 2"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Temps]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Temps]) [refTable]
+where [refTable].[date_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="date_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="date_complete" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="jour" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="mois" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="trimestre" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="annee" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="jour_semaine" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="est_weekend" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="saison" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[date_id_clean]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Performance Flow Task\Lookup 2.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Performance Flow Task\Lookup 2.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Lookup 2.Inputs[Lookup Input].Columns[date_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="date_id_clean"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[date_id_clean]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">date_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Performance Flow Task\Lookup 2.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Performance Flow Task\Lookup 2.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Lookup 2.Outputs[Lookup Match Output].Columns[date_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Performance Flow Task\Lookup 2.Outputs[Lookup Match Output].Columns[date_id]"
+                      name="date_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">date_id</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Performance Flow Task\Lookup 2.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Performance Flow Task\Lookup 2.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Performance Flow Task\Lookup 2.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Performance Flow Task\Lookup 2.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Performance Flow Task\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Performance Flow Task\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Performance Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Fact_Performance]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Performance Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[taux_annul_clean]"
+                      cachedDataType="numeric"
+                      cachedName="taux_annul_clean"
+                      cachedPrecision="29"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[taux_annulation]"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[taux_annul_clean]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[retard_clean]"
+                      cachedDataType="numeric"
+                      cachedName="retard_clean"
+                      cachedPrecision="29"
+                      cachedScale="1"
+                      externalMetadataColumnId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[retard_moyen_min]"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[retard_clean]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[satisfaction_clean]"
+                      cachedDataType="numeric"
+                      cachedName="satisfaction_clean"
+                      cachedPrecision="29"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[satisfaction_score]"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[satisfaction_clean]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[perf_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="perf_id_clean"
+                      externalMetadataColumnId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[perf_id]"
+                      lineageId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output].Columns[perf_id_clean]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[compagnie_id]"
+                      cachedDataType="i4"
+                      cachedName="compagnie_id"
+                      externalMetadataColumnId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[compagnie_id]"
+                      lineageId="Package\Performance Flow Task\Lookup.Outputs[Lookup Match Output].Columns[compagnie_id]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[aeroport_id]"
+                      cachedDataType="i4"
+                      cachedName="aeroport_id"
+                      externalMetadataColumnId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[aeroport_id]"
+                      lineageId="Package\Performance Flow Task\Lookup 1.Outputs[Lookup Match Output].Columns[aeroport_id]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[date_id]"
+                      cachedDataType="i4"
+                      cachedName="date_id"
+                      externalMetadataColumnId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date_id]"
+                      lineageId="Package\Performance Flow Task\Lookup 2.Outputs[Lookup Match Output].Columns[date_id]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[nb_vols_total]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="nb_vols_total"
+                      externalMetadataColumnId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nb_vols_total]"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[nb_vols_total]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[revenus_estimes_usd]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="revenus_estimes_usd"
+                      externalMetadataColumnId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[revenus_estimes_usd]"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[revenus_estimes_usd]" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[taux_ponctualite]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="taux_ponctualite"
+                      externalMetadataColumnId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[taux_ponctualite]"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[taux_ponctualite]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[perf_id]"
+                      dataType="i4"
+                      name="perf_id" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date_id]"
+                      dataType="i4"
+                      name="date_id" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[compagnie_id]"
+                      dataType="i4"
+                      name="compagnie_id" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[aeroport_id]"
+                      dataType="i4"
+                      name="aeroport_id" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nb_vols_total]"
+                      dataType="i4"
+                      name="nb_vols_total" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[taux_ponctualite]"
+                      dataType="numeric"
+                      name="taux_ponctualite"
+                      precision="5"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[taux_annulation]"
+                      dataType="numeric"
+                      name="taux_annulation"
+                      precision="5"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[retard_moyen_min]"
+                      dataType="numeric"
+                      name="retard_moyen_min"
+                      precision="8"
+                      scale="1" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[satisfaction_score]"
+                      dataType="numeric"
+                      name="satisfaction_score"
+                      precision="4"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[revenus_estimes_usd]"
+                      dataType="numeric"
+                      name="revenus_estimes_usd"
+                      precision="14"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Performance Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Performance Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Performance Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Performance Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Performance Flow Task\Script Component"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;13"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Script Component"
+              version="13">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from nbvolstotal.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        // 1. Reset the error flag for the current row
+        Row.IsErrorRow = false;
+
+        // 2. Process NB_VOLS_TOTAL
+        // Extract to local variable to avoid CS0206
+        string nbVolsRaw = Row.nbvolstotal_IsNull ? null : Row.nbvolstotal;
+        bool nbVolsError = false;
+        Row.nbvolstotal = CleanGeneral(nbVolsRaw, out nbVolsError);
+        if (nbVolsError) Row.IsErrorRow = true;
+
+        // 3. Process TAUX_PONCTUALITE
+        string tauxRaw = Row.tauxponctualite_IsNull ? null : Row.tauxponctualite;
+        bool tauxError = false;
+        string tauxClean = CleanGeneral(tauxRaw, out tauxError);
+
+        // Additional logic for Capping Percentage
+        decimal tVal;
+        if (!tauxError && decimal.TryParse(tauxClean, out tVal))
+        {
+            if (tVal > 1) tauxClean = "1.0";
+        }
+        Row.tauxponctualite = tauxClean;
+        if (tauxError) Row.IsErrorRow = true;
+
+        // 4. Process REVENUS_ESTIMES_USD
+        string revRaw = Row.revenusestimesusd_IsNull ? null : Row.revenusestimesusd;
+        bool revError = false;
+        Row.revenusestimesusd = CleanGeneral(revRaw, out revError);
+        if (revError) Row.IsErrorRow = true;
+    }
+
+    private string CleanGeneral(string input, out bool errorFound)
+    {
+        errorFound = false;
+
+        // Handle NULLs, empty strings, or strings with only spaces
+        if (string.IsNullOrWhiteSpace(input))
+        {
+            return null;
+        }
+
+        string trimmed = input.Trim();
+
+        // The "General Character Detector"
+        decimal v;
+        if (decimal.TryParse(trimmed, out v))
+        {
+            // It's a number! Convert negative to positive (e.g., -50000 -> 50000)
+            return Math.Abs(v).ToString();
+        }
+        else
+        {
+            // It's a character string (like #REF!, ABC, or N/A)
+            errorFound = true;
+            return null;
+        }
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String nbvolstotal
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[0]);
+        }
+        set
+        {
+            this[0] = value;
+        }
+    }
+    public bool nbvolstotal_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(0);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String tauxponctualite
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[1]);
+        }
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool tauxponctualite_IsNull
+    {
+        get
+        {
+            return IsNull(1);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String revenusestimesusd
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[2]);
+        }
+        set
+        {
+            this[2] = value;
+        }
+    }
+    public bool revenusestimesusd_IsNull
+    {
+        get
+        {
+            return IsNull(2);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(2);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Boolean IsErrorRow
+    {
+        set
+        {
+            this[3] = value;
+        }
+    }
+    public bool IsErrorRow_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(3);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_0d89e1ee13214b65a7356d372b52534b")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_0d89e1ee13214b65a7356d372b52534b")]
+[assembly: AssemblyCopyright("Copyright @  2026")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>SC_0d89e1ee13214b65a7356d372b52534b</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>SC_0d89e1ee13214b65a7356d372b52534b</msb:DisplayName>
+    <msb:ProjectId>{F3D59DA0-8797-48B1-8360-46010DA14D06}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_0d89e1ee13214b65a7356d372b52534b.csproj" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_0d89e1ee13214b65a7356d372b52534b.Properties.Settings.get_Default():SC_0d89e1ee13214b65a7356d372b52534b.Properties.Sett" +
+    "ings")]
+
+namespace SC_0d89e1ee13214b65a7356d372b52534b.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_0d89e1ee13214b65a7356d372b52534b.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ABC812BF-069C-4EA7-ACDF-387F1C9801CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_0d89e1ee13214b65a7356d372b52534b</RootNamespace>
+    <AssemblyName>SC_0d89e1ee13214b65a7356d372b52534b</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC160</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_0d89e1ee13214b65a7356d372b52534b.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_0d89e1ee13214b65a7356d372b52534b.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_0d89e1ee13214b65a7356d372b52534b.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_0d89e1ee13214b65a7356d372b52534b.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_0d89e1ee13214b65a7356d372b52534b.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_0d89e1ee13214b65a7356d372b52534b.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAHSzwmkAAAAAAAAAAOAAIiALATAAABgAAAAIAAAAAAAANjYA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAOQ1AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAPBYAAAAgAAAAGAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAaAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAIAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAY
+NgAAAAAAAEgAAAACAAUAQCMAAOwRAAABAAAAAAAAACw1AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAQAugAAAAEAABEDFm8TAAAG
+A28JAAAGLQgDbwcAAAYrARQKFgsDAgYSASgEAAAGbwgAAAYHLAcDF28TAAAGA28NAAAGLQgDbwsA
+AAYrARQMFg0CCBIDKAQAAAYTBAktIBEEEgUoEgAACiwVEQV+EwAACigUAAAKLAdyAQAAcBMEAxEE
+bwwAAAYJLAcDF28TAAAGA28RAAAGLQgDbw8AAAYrARQTBhYTBwMCEQYSBygEAAAGbxAAAAYRBywH
+AxdvEwAABioAABMwAgAwAAAAAgAAEQQWUgMoFQAACiwCFCoDbxYAAAoSACgSAAAKLA8GKBcAAAoL
+EgEoGAAACioEF1IUKh4CKBcAAAYqKgIDBAUoGQAACipSAnsaAAAKAnsbAAAKFpRvHAAACiomAhYD
+KB0AAAoqIgIWKB4AAAoqWgMsCAIWKB8AAAoqcgkAAHBzIAAACnpSAnsaAAAKAnsbAAAKF5RvHAAA
+CiomAhcDKB0AAAoqIgIXKB4AAAoqWgMsCAIXKB8AAAoqcgkAAHBzIAAACnpSAnsaAAAKAnsbAAAK
+GJRvHAAACiomAhgDKB0AAAoqIgIYKB4AAAoqWgMsCAIYKB8AAAoqcgkAAHBzIAAACno6AhkDjB4A
+AAEoHQAACipaAywIAhkoHwAACipyCQAAcHMgAAAKeh4CKCEAAAoqHgIoIgAACip+AigjAAAKAgJz
+GwAABn0BAAAEAgJzHAAABn0CAAAEKpIEcqYAAHAabyQAAAosFQIFAgMoJQAACg4EcwYAAAZvGQAA
+BipKKwcCA28aAAAGA28VAAAGLfEqBio6AigmAAAKAgN9AwAABCo6AigmAAAKAgN9BAAABCoeAigm
+AAAKKq5+BQAABC0ecrQAAHDQBwAAAignAAAKbygAAApzKQAACoAFAAAEfgUAAAQqGn4GAAAEKh4C
+gAYAAAQqGn4HAAAEKh4CKCoAAAoqLnMiAAAGgAcAAAQqQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAz
+MTkAAAAABQBsAAAAyAYAACN+AAA0BwAAoAcAACNTdHJpbmdzAAAAANQOAAAoAQAAI1VTAPwPAAAQ
+AAAAI0dVSUQAAAAMEAAA4AEAACNCbG9iAAAAAAAAAAIAAAFXFaIBCQEAAAD6ATMAFgAAAQAAACIA
+AAAIAAAABwAAACMAAAAXAAAAKgAAABAAAAACAAAAAwAAAAsAAAASAAAAAQAAAAQAAAABAAAAAACv
+AwEAAAAAAAYAYwLCBQYA9wLCBQYArwGvBQ8ANgYAAAYA3AEABQYARgIABQYAJwIABQYA3gIABQYA
+gwIABQYAnAIABQYA8wEABQYADgIyAwoAtwLLAAYAZAOcBAoAfQXLAA4AbgXLAAoASQXLAAoA/AbL
+AAYAvwacBAYAkgGvBQYAjgXiBQYAPQXrBBIAOgGZAxIAwwGZAxIAGQHWBAYAdwHCBQYAWAOcBAYA
+XwOcBAYAEgWcBAYAtAScBAYALAWcBAYA7ACcBAYAmQCcBAYAlgcABQAAAAABAAAAAAABAAEAAQAQ
+AMsEAAAQAAEAAQABABAAYQUAAD0AAQAGAAEAEADeBgAASQABABcAAQAQALMGAABNAAMAGwABABAA
+dAYAAE0ABAAcAAAAEADpBUUGTQAFAB0AAAEQAKMGRQZlAAcAIQAGALMGrgAGAHQGsgABAOwGtgAB
+AOwGtgARAKgEugARAAkBvgARAIkAwgBQIAAAAADGABUDBgABAFggAAAAAMYAIAMGAAEAYCAAAAAA
+xgBzB8YAAQAoIQAAAACBAGwDzAACAGQhAAAAAIYYngUGAAQAbCEAAAAAhhieBVIABAB3IQAAAACG
+CHkDRwAHAIwhAAAAAIYIiQMQAAcAliEAAAAAhghHBHQACACfIQAAAACGCF4E0wAIALYhAAAAAIYI
+TwFHAAkAyyEAAAAAhghjARAACQDVIQAAAACGCBEEdAAKAN4hAAAAAIYILATTAAoA9SEAAAAAhghK
+AEcACwAKIgAAAACGCGAAEAALABQiAAAAAIYI1wN0AAwAHSIAAAAAhgj0A9MADAA0IgAAAACGCGQH
+0wANAEMiAAAAAIYIdQTTAA4AWiIAAAAAhgCKB3QADwBiIgAAAACGAMYGdAAPAGoiAAAAAIYYngUG
+AA8AiiIAAAAAxgBRB9gADwCvIgAAAADGAUoHxgATAMIiAAAAAMYBcwfGABQAxCIAAAAAhhieBeIA
+FQDTIgAAAACGGJ4F4gAWAOIiAAAAAIMYngUGABcA6iIAAAAAkwiKBegAFwAWIwAAAACTCPEA7QAX
+AB0jAAAAAJMI/QDyABcAJSMAAAAAlgjSBvgAGAAsIwAAAACGGJ4FBgAYADQjAAAAAJEYpAX9ABgA
+AAABAI4HAAABAF4HAgACAD8AAAABAIMFAAACAH4GAAADAFcFAAABACwDAAABACwDAAABACwDAAAB
+ACwDAAABACwDAAABACwDAAABACwDAAABACwDAAABAAoAAAACAL0AAAADAIMFAAAEAFcFAAABAIMF
+AAABAI4HAAABAAIHAAABAAIHAAABACwDCQCeBQEAEQCeBQYAGQCeBQoAKQCeBRAAMQCeBRAAOQCe
+BRAAQQCeBRAASQCeBRAAUQCeBRAAWQCeBRAAYQCeBRAAaQCeBQYAoQCeBQYAwQCeBRUA0QCeBQYA
+kQAVAwYAkQAgAwYAcQAxAScAcQDHAC8AcQC8BDMA2QB2AEIA2QCjBEcA4QCrBUsAcQBMA0cAeQCe
+BVIAeQCDBVwAeQB+BmAAgQBVA2QAeQCTBGkAeQCEBG8AeQCLBAEA6QCeBRAAeQCKB3QAeQDGBnQA
+kQCeBQYA2QCsBngAkQCSBn8AmQCeBQYAAQGrAIUAAQGSB44AqQCeBZQAyQCeBQYALgALABgBLgAT
+ACEBLgAbAEABLgAjAEkBLgArAHIBLgAzAHIBLgA7AHIBLgBDAEkBLgBLAHgBLgBTAHIBLgBbAI8B
+QwBjANkB4QB7ANkB4wBrANkBKQFzAEABSQFzAEABGwA7AAMAAQAHAAkACAALAAAAjQMBAQAAYgQF
+AQAAZwEBAQAAMAQFAQAAZAABAQAA+AMFAQAAaAcFAQAAeQQFAQAAjgUJAQAAEQEOAQAA1gYTAQIA
+BwADAAEACAADAAIACQAFAAEACgAFAAIACwAHAAEADAAHAAIADQAJAAEADgAJAAIADwALAAEAEAAL
+AAIAEQANAAEAEgANAAEAEwAPAAEAFAARAAIAHgATAAIAHwAVAAEAIAAVAAIAIQAXAASAAAABAAAA
+AAAAAAAAAAAAABIAAAAEAAAAAAAAAAAAAACcADYAAAAAABAAAAAAAAAAAAAAAKUADAcAAAAAEAAA
+AAAAAAAAAAAApQApBwAAAAAEAAAAAAAAAAAAAACcAJwEAAAAAAAAAAABAAAA8wUAAAAAAAAAPE1v
+ZHVsZT4ASW5wdXRJRABTQ18wZDg5ZTFlZTEzMjE0YjY1YTczNTZkMzcyYjUyNTM0YgBtc2Nvcmxp
+YgBlcnJvckZvdW5kAGdldF9yZXZlbnVzZXN0aW1lc3VzZABzZXRfcmV2ZW51c2VzdGltZXN1c2QA
+SXNOdWxsT3JXaGl0ZVNwYWNlAGRlZmF1bHRJbnN0YW5jZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRU
+eXBlRnJvbUhhbmRsZQBJbnB1dE5hbWUAT25lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVs
+aW5lAFR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0
+aW9uU2V0dGluZ3NCYXNlAFRyeVBhcnNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAGdldF90YXV4cG9u
+Y3R1YWxpdGUAc2V0X3RhdXhwb25jdHVhbGl0ZQBDb21waWxlckdlbmVyYXRlZEF0dHJpYnV0ZQBE
+ZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1dGUARWRpdG9yQnJv
+d3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUAQXNzZW1ibHlUcmFkZW1hcmtB
+dHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAEFzc2VtYmx5Q29uZmlndXJhdGlvbkF0
+dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENvbXBpbGF0aW9uUmVsYXhhdGlv
+bnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0
+cmlidXRlAFNTSVNTY3JpcHRDb21wb25lbnRFbnRyeVBvaW50QXR0cmlidXRlAEFzc2VtYmx5Q29t
+cGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBQcmVFeGVjdXRlAFBv
+c3RFeGVjdXRlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAVG9TdHJpbmcAR2V0U3Ry
+aW5nAE1hdGgARGVjaW1hbABDbGVhbkdlbmVyYWwAZ2V0X25idm9sc3RvdGFsAHNldF9uYnZvbHN0
+b3RhbABTeXN0ZW0uQ29tcG9uZW50TW9kZWwAU0NfMGQ4OWUxZWUxMzIxNGI2NWE3MzU2ZDM3MmI1
+MjUzNGIuZGxsAGdldF9yZXZlbnVzZXN0aW1lc3VzZF9Jc051bGwAc2V0X3JldmVudXNlc3RpbWVz
+dXNkX0lzTnVsbABnZXRfdGF1eHBvbmN0dWFsaXRlX0lzTnVsbABzZXRfdGF1eHBvbmN0dWFsaXRl
+X0lzTnVsbABnZXRfbmJ2b2xzdG90YWxfSXNOdWxsAHNldF9uYnZvbHN0b3RhbF9Jc051bGwAc2V0
+X0lzRXJyb3JSb3dfSXNOdWxsAFNldE51bGwAc2V0X0l0ZW0AU3lzdGVtAFRyaW0AcmVzb3VyY2VN
+YW4AQm9vbGVhbgBvcF9HcmVhdGVyVGhhbgBTY3JpcHRNYWluAFN5c3RlbS5Db25maWd1cmF0aW9u
+AFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0aW9uAEludmFsaWRPcGVyYXRpb25F
+eGNlcHRpb24AU3RyaW5nQ29tcGFyaXNvbgBDdWx0dXJlSW5mbwBPdXRwdXROYW1lTWFwAE91dHB1
+dE1hcABJbnB1dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJj
+ZU1hbmFnZXIALmN0b3IALmNjdG9yAEFicwBTeXN0ZW0uRGlhZ25vc3RpY3MAU3lzdGVtLlJ1bnRp
+bWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVzb3VyY2VzAFNDXzBkODllMWVlMTMyMTRiNjVh
+NzM1NmQzNzJiNTI1MzRiLlByb3BlcnRpZXMuUmVzb3VyY2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdN
+b2RlcwBTQ18wZDg5ZTFlZTEzMjE0YjY1YTczNTZkMzcyYjUyNTM0Yi5Qcm9wZXJ0aWVzAFZhcmlh
+YmxlcwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENvbHVtbkluZGV4ZXMAU2V0dGluZ3MARXF1YWxz
+AENvbm5lY3Rpb25zAE9iamVjdABFbmRPZlJvd3NldABnZXRfRGVmYXVsdABVc2VyQ29tcG9uZW50
+AFBhcmVudENvbXBvbmVudABTY3JpcHRDb21wb25lbnQATWljcm9zb2Z0LlNxbFNlcnZlci5UeFNj
+cmlwdABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABJbnB1dDBfUHJvY2Vzc0lucHV0
+AGlucHV0AHNldF9Jc0Vycm9yUm93AElucHV0MF9Qcm9jZXNzSW5wdXRSb3cATmV4dFJvdwBnZXRf
+QXNzZW1ibHkAAAAHMQAuADAAAICbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEA
+bgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAg
+AGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEA
+ZAAuAAANSQBuAHAAdQB0ADAAAHFTAEMAXwAwAGQAOAA5AGUAMQBlAGUAMQAzADIAMQA0AGIANgA1
+AGEANwAzADUANgBkADMANwAyAGIANQAyADUAMwA0AGIALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4A
+UgBlAHMAbwB1AHIAYwBlAHMAAAAAQdd9+wyayUya+zpXqWnkqgAEIAEBCAMgAAEFIAEBEREEIAEB
+DgUgAQERXQsHCA4CDgIOETkOAgcAAgIOEBE5AwYROQcAAgIRORE5BgcCETkROQQAAQIOAyAADgYA
+ARE5ETkJIAMBEkEdCBJFAwYSQQMGHQgEIAEOCAUgAgEIHAQgAQIIAyAAAgYgAgIOEX0FIAEdCAgI
+AAESgIERgIUFIAASgIkHIAIBDhKAiQi3elxWGTTgiQiJhF3NgIDMkQMGEhQDBhIYAwYSSQMGElUD
+BhJZAwYSIAUgAQESDAYgAg4OEAIEIAEBAgkgBAEIDhJBEkUFIAEBEkkEAAASVQQAABJZBQABARJZ
+BAAAEiADAAABAygADgMoAAIECAASVQQIABJZBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25F
+eGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzBkODllMWVlMTMyMTRiNjVhNzM1NmQzNzJi
+NTI1MzRiAAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjYAAEkBABouTkVURnJhbWV3b3JrLFZl
+cnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43BAEA
+AAAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNj
+b3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1i
+NzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAA
+AAAAAAAAUEFEUEFEULQAAAAMNgAAAAAAAAAAAAAmNgAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+GDYAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgA
+AABYQAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAA
+AL0E7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAA
+AQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAA
+AAAAAACwBEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAwADAA
+MAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEAbgB5
+AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAA
+UwBDAF8AMABkADgAOQBlADEAZQBlADEAMwAyADEANABiADYANQBhADcAMwA1ADYAZAAzADcAMgBi
+ADUAMgA1ADMANABiAAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADAA
+LgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwAwAGQAOAA5AGUAMQBl
+AGUAMQAzADIAMQA0AGIANgA1AGEANwAzADUANgBkADMANwAyAGIANQAyADUAMwA0AGIALgBkAGwA
+bAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0
+ACAAQAAgACAAMgAwADIANgAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAA
+AAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfADAAZAA4
+ADkAZQAxAGUAZQAxADMAMgAxADQAYgA2ADUAYQA3ADMANQA2AGQAMwA3ADIAYgA1ADIANQAzADQA
+YgAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwAwAGQAOAA5
+AGUAMQBlAGUAMQAzADIAMQA0AGIANgA1AGEANwAzADUANgBkADMANwAyAGIANQAyADUAMwA0AGIA
+AAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAI
+AAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAADg2AAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_0d89e1ee13214b65a7356d372b52534b</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">DB</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Performance Flow Task\Script Component.Inputs[Input0]"
+                  hasSideEffects="true"
+                  name="Input0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Script Component.Inputs[Input0].Columns[nb_vols_total]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="nb_vols_total"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[nb_vols_total]"
+                      name="nb_vols_total"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Script Component.Inputs[Input0].Columns[taux_ponctualite]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="taux_ponctualite"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[taux_ponctualite]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Script Component.Inputs[Input0].Columns[revenus_estimes_usd]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="revenus_estimes_usd"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[revenus_estimes_usd]"
+                      usageType="readWrite" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Performance Flow Task\Script Component.Outputs[error]"
+                  name="error"
+                  synchronousInputId="Package\Performance Flow Task\Script Component.Inputs[Input0]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Script Component.Outputs[error].Columns[IsErrorRow]"
+                      dataType="bool"
+                      lineageId="Package\Performance Flow Task\Script Component.Outputs[error].Columns[IsErrorRow]"
+                      name="IsErrorRow" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Performance Flow Task\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Performance Flow Task\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Sort.Inputs[Sort Input].Columns[perf_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="perf_id"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[perf_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Sort.Inputs[Sort Input].Columns[date_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="date_id"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[date_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Sort.Inputs[Sort Input].Columns[compagnie_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="compagnie_id"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[compagnie_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Sort.Inputs[Sort Input].Columns[aeroport_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="aeroport_id"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[aeroport_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Sort.Inputs[Sort Input].Columns[nb_vols_total]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="nb_vols_total"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[nb_vols_total]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Sort.Inputs[Sort Input].Columns[taux_ponctualite]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="taux_ponctualite"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[taux_ponctualite]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Sort.Inputs[Sort Input].Columns[taux_annulation]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="taux_annulation"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[taux_annulation]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Sort.Inputs[Sort Input].Columns[retard_moyen_min]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="retard_moyen_min"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[retard_moyen_min]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Sort.Inputs[Sort Input].Columns[satisfaction_score]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="satisfaction_score"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[satisfaction_score]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Performance Flow Task\Sort.Inputs[Sort Input].Columns[revenus_estimes_usd]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="revenus_estimes_usd"
+                      lineageId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[revenus_estimes_usd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Performance Flow Task\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[perf_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[perf_id]"
+                      name="perf_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[perf_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[date_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[date_id]"
+                      name="date_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[date_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[compagnie_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[compagnie_id]"
+                      name="compagnie_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[compagnie_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[aeroport_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[aeroport_id]"
+                      name="aeroport_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[aeroport_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[nb_vols_total]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[nb_vols_total]"
+                      name="nb_vols_total">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[nb_vols_total]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[taux_ponctualite]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[taux_ponctualite]"
+                      name="taux_ponctualite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[taux_ponctualite]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[taux_annulation]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[taux_annulation]"
+                      name="taux_annulation">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[taux_annulation]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[retard_moyen_min]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[retard_moyen_min]"
+                      name="retard_moyen_min">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[retard_moyen_min]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[satisfaction_score]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[satisfaction_score]"
+                      name="satisfaction_score">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[satisfaction_score]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[revenus_estimes_usd]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Performance Flow Task\Sort.Outputs[Sort Output].Columns[revenus_estimes_usd]"
+                      name="revenus_estimes_usd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[revenus_estimes_usd]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Performance Flow Task.Paths[Derived Column Output]"
+              endId="Package\Performance Flow Task\Script Component.Inputs[Input0]"
+              name="Derived Column Output"
+              startId="Package\Performance Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Performance Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Performance Flow Task\Sort.Inputs[Sort Input]"
+              name="Flat File Source Output"
+              startId="Package\Performance Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Performance Flow Task.Paths[Lignes_Valides]"
+              endId="Package\Performance Flow Task\Lookup.Inputs[Lookup Input]"
+              name="Lignes_Valides"
+              startId="Package\Performance Flow Task\Conditional Split.Outputs[Lignes_Valides]" />
+            <path
+              refId="Package\Performance Flow Task.Paths[Lookup Match Output]"
+              endId="Package\Performance Flow Task\Lookup 1.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Performance Flow Task\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Performance Flow Task.Paths[Lookup Match Output1]"
+              endId="Package\Performance Flow Task\Lookup 2.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Performance Flow Task\Lookup 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Performance Flow Task.Paths[Lookup Match Output2]"
+              endId="Package\Performance Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Performance Flow Task\Lookup 2.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Performance Flow Task.Paths[nb_vols_clean]"
+              endId="Package\Performance Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+              name="nb_vols_clean"
+              startId="Package\Performance Flow Task\Script Component.Outputs[error]" />
+            <path
+              refId="Package\Performance Flow Task.Paths[Sort Output]"
+              endId="Package\Performance Flow Task\Derived Column.Inputs[Derived Column Input]"
+              name="Sort Output"
+              startId="Package\Performance Flow Task\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="189.333333333334,42.6666666666667"
+          Id="Package\Performance Flow Task"
+          TopLeft="60,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Performance Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="122.666666666667,42.6666666666667"
+          Id="Package\Performance Flow Task\Lookup 1"
+          TopLeft="300.208323191231,448.499978613854" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Performance Flow Task\OLE DB Destination"
+          TopLeft="274.583324336757,708.783307514986" />
+        <NodeLayout
+          Size="98.6666666666667,42.6666666666667"
+          Id="Package\Performance Flow Task\Sort"
+          TopLeft="301.874986505136,53.299997458458" />
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\Performance Flow Task\Flat File Source"
+          TopLeft="70.6249968428166,51.9999975204469" />
+        <NodeLayout
+          Size="113.333333333334,42.6666666666667"
+          Id="Package\Performance Flow Task\Lookup"
+          TopLeft="295.833323386809,347.749983417988" />
+        <NodeLayout
+          Size="122.666666666667,42.6666666666667"
+          Id="Package\Performance Flow Task\Lookup 2"
+          TopLeft="302.708323079472,565.083315511545" />
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\Performance Flow Task\Conditional Split"
+          TopLeft="273.374991087243,235.949988749028" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Performance Flow Task\Derived Column"
+          TopLeft="505.624977396802,53.9666641251248" />
+        <EdgeLayout
+          Id="Package\Performance Flow Task.Paths[Sort Output]"
+          TopLeft="400.541653171803,74.9666641251247">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="105.083324224999,0"
+              Start="0,0"
+              End="97.5833242249988,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="97.5833242249988,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Performance Flow Task.Paths[Lookup Match Output2]"
+          TopLeft="362.312490374781,607.749982178211">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,101.033325336775"
+              Start="0,0"
+              End="0,93.5333253367747">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,93.5333253367747" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,40.9619751683873,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Performance Flow Task.Paths[Lookup Match Output1]"
+          TopLeft="362.791656468685,491.166645280521">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,73.9166702310242"
+              Start="0,0"
+              End="0,66.4166702310242">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.4166702310242" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,27.4036476155121,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Performance Flow Task.Paths[Lookup Match Output]"
+          TopLeft="352.499990053475,390.416650084655">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.04166647108883,58.0833285291991"
+              Start="0,0"
+              End="9.04166647108883,50.5833285291991">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.0416642645995" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.0416642645995"
+                    Point2="0,29.0416642645995"
+                    Point3="4,29.0416642645995" />
+                  <mssgle:LineSegment
+                    End="5.04166647108883,29.0416642645995" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.04166647108883,29.0416642645995"
+                    Point2="9.04166647108883,29.0416642645995"
+                    Point3="9.04166647108883,33.0416642645995" />
+                  <mssgle:LineSegment
+                    End="9.04166647108883,50.5833285291991" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-43.6705534832056,34.0416642645995,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Performance Flow Task.Paths[Lignes_Valides]"
+          TopLeft="351.937490570359,278.616655415694">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69.1333280022941"
+              Start="0,0"
+              End="0,61.6333280022941">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.6333280022941" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-32.842578125,24.985121032397,65.68515625,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Performance Flow Task.Paths[Flat File Source Output]"
+          TopLeft="222.624996842817,73.9833308227858">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="79.2499896623198,0"
+              Start="0,0"
+              End="71.7499896623198,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="71.7499896623198,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Performance Flow Task\Script Component"
+          TopLeft="282.958322353041,150.799992809296" />
+        <EdgeLayout
+          Id="Package\Performance Flow Task.Paths[Derived Column Output]"
+          TopLeft="582.958310730135,96.6333307917914">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-217.999988377095,54.1666620175045"
+              Start="0,0"
+              End="-217.999988377095,46.6666620175045">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.0833310087523" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.0833310087523"
+                    Point2="0,27.0833310087523"
+                    Point3="-4,27.0833310087523" />
+                  <mssgle:LineSegment
+                    End="-213.999988377095,27.0833310087523" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-213.999988377095,27.0833310087523"
+                    Point2="-217.999988377095,27.0833310087523"
+                    Point3="-217.999988377095,31.0833310087523" />
+                  <mssgle:LineSegment
+                    End="-217.999988377095,46.6666620175045" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Performance Flow Task.Paths[nb_vols_clean]"
+          TopLeft="364.958322353041,193.466659475963">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13.5833312657973,42.4833292730651"
+              Start="0,0"
+              End="-13.5833312657973,34.9833292730651">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.2416646365326" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.2416646365326"
+                    Point2="0,21.2416646365326"
+                    Point3="-4,21.2416646365326" />
+                  <mssgle:LineSegment
+                    End="-9.58333126579726,21.2416646365326" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.58333126579726,21.2416646365326"
+                    Point2="-13.5833312657973,21.2416646365326"
+                    Point3="-13.5833312657973,25.2416646365326" />
+                  <mssgle:LineSegment
+                    End="-13.5833312657973,34.9833292730651" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Performance Flow Task\Lookup 1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Aeroport]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Performance Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Performance Flow Task\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Compagnie]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Performance Flow Task\Lookup 2">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Temps]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

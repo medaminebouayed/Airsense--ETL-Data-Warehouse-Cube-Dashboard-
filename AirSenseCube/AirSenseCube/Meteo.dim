@@ -1,0 +1,266 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ebf32877-5353-4ca8-93dc-50d1a0db666a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Meteo</ID>
+  <Name>Meteo</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3446" scrolltop="-3272" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9454" y="11359" backcolor="2499381" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Meteo" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3263" height="3298" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000bf0c0000e20c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Meteo" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-3446</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3272</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="175">
+            <Shape Id="Meteo Id" Expanded="false">
+              <Attributes>
+                <Attribute Id="Meteo Id" />
+                <Attribute Id="Precipitation Mm" />
+                <Attribute Id="Score Impact" />
+                <Attribute Id="Temperature" />
+                <Attribute Id="Vent Kmh" />
+                <Attribute Id="Visibilite Km" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Condition" Expanded="false">
+              <Attributes>
+                <Attribute Id="Condition" />
+              </Attributes>
+              <Position x="243" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="f57bc53e-a184-461f-b0b2-8490bb9a6707">
+    <DataSourceViewID>AirSense</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="960fa73e-977d-4f57-a437-a8c0d1a6387f">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="aad5c5af-8655-416b-9190-8d8093dbfa6f">
+      <ID>Meteo Id</ID>
+      <Name>Meteo Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1f1cd75f-f1d8-44bc-9f63-632611c9575f">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b3ab4f71-87fd-4348-a7bc-1a57b7e80f2b">
+            <TableID>dbo_Meteo</TableID>
+            <ColumnID>meteo_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="0c7b4870-9eaf-4614-bffc-4af13a1b52bb">
+          <AttributeID>Temperature</AttributeID>
+          <Name>Temperature</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3e5f7e82-019a-4bed-8adc-189640db3c82">
+          <AttributeID>Visibilite Km</AttributeID>
+          <Name>Visibilite Km</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9ec410a4-11d9-4fae-b160-ee79208d442b">
+          <AttributeID>Vent Kmh</AttributeID>
+          <Name>Vent Kmh</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ac2839b8-98d9-499e-8d85-aa0f9941e6d2">
+          <AttributeID>Precipitation Mm</AttributeID>
+          <Name>Precipitation Mm</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ecc95eae-af70-4e6b-b6f6-170c7eee2b62">
+          <AttributeID>Score Impact</AttributeID>
+          <Name>Score Impact</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="880e4b91-c919-4108-80a8-0d44a20299b4">
+          <AttributeID>Condition</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Condition</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9527a24c-f6a1-4aec-9c85-3fc187e81d7c">
+      <ID>Condition</ID>
+      <Name>Condition</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="84d76c49-824c-4370-ad24-622163c4ed42">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cbc7dda7-bd80-4ce1-85f7-1b503bef4dc2">
+            <TableID>dbo_Meteo</TableID>
+            <ColumnID>condition</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f415626e-7aac-41ef-8f3d-8dc3f545e03b">
+      <ID>Temperature</ID>
+      <Name>Temperature</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="27f480dd-84d8-4ea1-ab42-b783cabd0407">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a6502b4a-85b8-4d9c-b960-6dc32f81f596">
+            <TableID>dbo_Meteo</TableID>
+            <ColumnID>temperature</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="65aa6956-779a-4fb4-a108-6be9b36cfdf1">
+      <ID>Visibilite Km</ID>
+      <Name>Visibilite Km</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2b91fe11-9672-4617-a8ad-c7a94e1d9bff">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="66657f4b-f01b-433d-9ff4-6fb7d8b3d6a5">
+            <TableID>dbo_Meteo</TableID>
+            <ColumnID>visibilite_km</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8531a68c-c081-471b-9f15-3819d8a049c6">
+      <ID>Vent Kmh</ID>
+      <Name>Vent Kmh</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="37b20287-600b-4f72-a39c-95417e8dde6f">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="349d269c-72cf-448c-9235-54b8b48f3a47">
+            <TableID>dbo_Meteo</TableID>
+            <ColumnID>vent_kmh</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bb75dbe1-7d64-4e78-bc22-caf67e7d4d01">
+      <ID>Precipitation Mm</ID>
+      <Name>Precipitation Mm</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="50ecca35-f025-4c06-aec2-033f39e37894">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5eb22e4a-0119-4194-b360-2ca8ac1360fa">
+            <TableID>dbo_Meteo</TableID>
+            <ColumnID>precipitation_mm</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fc8799ac-ee89-4ea8-b321-5fd772f5301c">
+      <ID>Score Impact</ID>
+      <Name>Score Impact</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fb37f85f-fecb-4ef4-9677-00bfa8c4a461">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d9b61548-4a0f-46c5-bec1-e51671384c6f">
+            <TableID>dbo_Meteo</TableID>
+            <ColumnID>score_impact</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="2b837859-5e96-482b-9946-172038f41f1c">
+      <ID>Hierarchy</ID>
+      <Name>Hierarchy</Name>
+      <Levels>
+        <Level dwd:design-time-name="3cbbaf3f-a884-47e1-80c9-223180e59914">
+          <ID>Condition</ID>
+          <Name>Condition</Name>
+          <SourceAttributeID>Condition</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="6a8805b7-1b3f-4c5e-8cbb-27146ceff1f5">
+          <ID>Meteo Id</ID>
+          <Name>Meteo Id</Name>
+          <SourceAttributeID>Meteo Id</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

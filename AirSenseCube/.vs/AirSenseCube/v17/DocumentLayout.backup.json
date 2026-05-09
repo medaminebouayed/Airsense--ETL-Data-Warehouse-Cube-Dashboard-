@@ -1,0 +1,67 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\amine\\OneDrive\\Desktop\\SoftwareEngenering\\ING2\\sem2\\Business Intelligence\\ProjetBI\\AirSenseCube\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F0E936C2-DC38-08E9-A401-0BBF98426A74}|AirSenseCube\\AirSenseCube.dwproj|C:\\Users\\amine\\OneDrive\\Desktop\\SoftwareEngenering\\ING2\\sem2\\Business Intelligence\\ProjetBI\\AirSenseCube\\AirSenseCube\\AirSense.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{F0E936C2-DC38-08E9-A401-0BBF98426A74}|AirSenseCube\\AirSenseCube.dwproj|solutionrelative:AirSenseCube\\AirSense.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0E936C2-DC38-08E9-A401-0BBF98426A74}|AirSenseCube\\AirSenseCube.dwproj|C:\\Users\\amine\\OneDrive\\Desktop\\SoftwareEngenering\\ING2\\sem2\\Business Intelligence\\ProjetBI\\AirSenseCube\\AirSenseCube\\Cause Retard.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{F0E936C2-DC38-08E9-A401-0BBF98426A74}|AirSenseCube\\AirSenseCube.dwproj|solutionrelative:AirSenseCube\\Cause Retard.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0E936C2-DC38-08E9-A401-0BBF98426A74}|AirSenseCube\\AirSenseCube.dwproj|C:\\Users\\amine\\OneDrive\\Desktop\\SoftwareEngenering\\ING2\\sem2\\Business Intelligence\\ProjetBI\\AirSenseCube\\AirSenseCube\\Meteo.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{F0E936C2-DC38-08E9-A401-0BBF98426A74}|AirSenseCube\\AirSenseCube.dwproj|solutionrelative:AirSenseCube\\Meteo.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AirSense.dsv [Design]",
+              "DocumentMoniker": "C:\\Users\\amine\\OneDrive\\Desktop\\SoftwareEngenering\\ING2\\sem2\\Business Intelligence\\ProjetBI\\AirSenseCube\\AirSenseCube\\AirSense.dsv",
+              "RelativeDocumentMoniker": "AirSenseCube\\AirSense.dsv",
+              "ToolTip": "C:\\Users\\amine\\OneDrive\\Desktop\\SoftwareEngenering\\ING2\\sem2\\Business Intelligence\\ProjetBI\\AirSenseCube\\AirSenseCube\\AirSense.dsv [Design]",
+              "RelativeToolTip": "AirSenseCube\\AirSense.dsv [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-01T12:45:13.288Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Meteo.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\amine\\OneDrive\\Desktop\\SoftwareEngenering\\ING2\\sem2\\Business Intelligence\\ProjetBI\\AirSenseCube\\AirSenseCube\\Meteo.dim",
+              "RelativeDocumentMoniker": "AirSenseCube\\Meteo.dim",
+              "ToolTip": "C:\\Users\\amine\\OneDrive\\Desktop\\SoftwareEngenering\\ING2\\sem2\\Business Intelligence\\ProjetBI\\AirSenseCube\\AirSenseCube\\Meteo.dim [Design]",
+              "RelativeToolTip": "AirSenseCube\\Meteo.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-01T12:45:09.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cause Retard.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\amine\\OneDrive\\Desktop\\SoftwareEngenering\\ING2\\sem2\\Business Intelligence\\ProjetBI\\AirSenseCube\\AirSenseCube\\Cause Retard.dim",
+              "RelativeDocumentMoniker": "AirSenseCube\\Cause Retard.dim",
+              "ToolTip": "C:\\Users\\amine\\OneDrive\\Desktop\\SoftwareEngenering\\ING2\\sem2\\Business Intelligence\\ProjetBI\\AirSenseCube\\AirSenseCube\\Cause Retard.dim [Design]",
+              "RelativeToolTip": "AirSenseCube\\Cause Retard.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-01T12:45:08.27Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

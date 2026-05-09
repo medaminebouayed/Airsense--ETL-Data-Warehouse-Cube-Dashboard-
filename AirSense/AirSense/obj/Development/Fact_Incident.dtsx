@@ -1,0 +1,2658 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/22/2026 3:30:25 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DAOUDYASSINE"
+  DTS:CreatorName="DAOUDYASSINE\daoud"
+  DTS:DTSID="{57BE9E09-AAC4-4B8E-BD02-03ED8A1B1466}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1008.3"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{F070650A-D7D6-4909-8669-FB3E5E376F25}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D8C92F71-53CD-4024-A78F-82346E71BB6B}"
+      DTS:ObjectName="AMINE\MSSQLSERVER1.AirSense.SA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=AMINE\MSSQLSERVER1;User ID=SA;Initial Catalog=AirSense;Provider=SQLOLEDB.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package1-{D8C92F71-53CD-4024-A78F-82346E71BB6B}AMINE\MSSQLSERVER1.AirSense.SA;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAyDlRsuH3IkG+Gngl7StQLQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACR5iWxWCWk7EEmq4D5gFsXcb+8m9nG8G2liZIkMhLAXwAAAAAOgAAAAAIAACAAAAC8B6poqUlAtw8P32fHVoLtiSMaAf6JOAvSeSnN8rktjxAAAACunX3CaYT32MG/crN6A9TwQAAAAEZ95Jpj0cgxrsQX5ma37uu1nnoPBqbhtfigiFXTSSocd1VG6xcJ/rZD8mhs/VH/yY3WxpoUCskfN1LG/sVW6q8</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File InputFact_incident]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{BDD7349F-26A7-4BCE-8E00-7A21F6F479C8}"
+      DTS:ObjectName="Flat File InputFact_incident">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\amine\OneDrive\Desktop\SoftwareEngenering\ING2\sem2\Business Intelligence\ProjetBI\data\RAW_FACT_Incident.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="incident_id"
+              DTS:DTSID="{BB09523A-827F-4C7A-B1FF-318E4D47DF86}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="date_id"
+              DTS:DTSID="{2B7BA2CE-CFF0-4DF7-BCB8-EFD7C5EFDD4E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="compagnie_id"
+              DTS:DTSID="{FD22D41D-1ED1-4425-9083-98AB4CEF28C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="aeroport_id"
+              DTS:DTSID="{A6764C58-7D44-4A7C-A4C0-50B38704CE05}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="type_incident_id"
+              DTS:DTSID="{05EF41C3-BA5F-4BB7-AF97-862BD042A2EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="severite_score"
+              DTS:DTSID="{717AB28A-CA3D-4A25-9CC9-0C96F6CD62EE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="duree_immobilisation_h"
+              DTS:DTSID="{B08575E1-9EAC-4674-9020-8A719B876303}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cout_incident_usd"
+              DTS:DTSID="{0F723B54-15FE-49D0-9155-7D9123EE2377}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nb_passagers_affectes"
+              DTS:DTSID="{D862E683-413C-457F-BBF2-09CE3C962AE0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="resolu"
+              DTS:DTSID="{C9A68719-B5FC-49E1-A0E8-4549AFC16CC0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Fact_incident"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C96E577F-8E5C-4236-87B4-7EC47E7C6B1A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Fact_incident"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Fact_incident\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Fact_incident\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fact_incident\Conditional Split.Inputs[Conditional Split Input].Columns[aeroport_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="aeroport_id"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[aeroport_id]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Conditional Split.Inputs[Conditional Split Input].Columns[type_incident_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="type_incident_id"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[type_incident_id]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Conditional Split.Inputs[Conditional Split Input].Columns[incident_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="incident_id_clean"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[incident_id_clean]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Conditional Split.Inputs[Conditional Split Input].Columns[date_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="date_id_clean"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[date_id_clean]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Conditional Split.Inputs[Conditional Split Input].Columns[compagnie_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="compagnie_id_clean"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[compagnie_id_clean]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Conditional Split.Inputs[Conditional Split Input].Columns[severite_clean]"
+                      cachedDataType="i4"
+                      cachedName="severite_clean"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[severite_clean]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Conditional Split.Inputs[Conditional Split Input].Columns[aeroport_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="aeroport_id_clean"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[aeroport_id_clean]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Conditional Split.Inputs[Conditional Split Input].Columns[type_incident_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="type_incident_id_clean"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[type_incident_id_clean]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fact_incident\Conditional Split.Outputs[Lignes_valides]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lignes_valides"
+                  synchronousInputId="Package\Fact_incident\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">![ISNULL](#{Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[incident_id_clean]}) &amp;&amp; ![ISNULL](#{Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[date_id_clean]}) &amp;&amp; ![ISNULL](#{Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[compagnie_id_clean]}) &amp;&amp; ![ISNULL](#{Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[severite_clean]}) &amp;&amp; (DT_I4)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[aeroport_id]} &gt;= 1 &amp;&amp; (DT_I4)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[aeroport_id]} &lt;= 12 &amp;&amp; (DT_I4)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[type_incident_id]} &gt;= 1 &amp;&amp; (DT_I4)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[type_incident_id]} &lt;= 10 &amp;&amp; ![ISNULL](#{Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[aeroport_id_clean]}) &amp;&amp; ![ISNULL](#{Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[type_incident_id_clean]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!ISNULL(incident_id_clean) &amp;&amp; !ISNULL(date_id_clean) &amp;&amp; !ISNULL(compagnie_id_clean) &amp;&amp; !ISNULL(severite_clean) &amp;&amp; (DT_I4)aeroport_id &gt;= 1 &amp;&amp; (DT_I4)aeroport_id &lt;= 12 &amp;&amp; (DT_I4)type_incident_id &gt;= 1 &amp;&amp; (DT_I4)type_incident_id &lt;= 10 &amp;&amp; !ISNULL(aeroport_id_clean) &amp;&amp; !ISNULL(type_incident_id_clean)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fact_incident\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Fact_incident\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fact_incident\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Fact_incident\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fact_incident\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fact_incident\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Fact_incident\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fact_incident\Derived Column.Inputs[Derived Column Input].Columns[incident_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="incident_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[incident_id]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Derived Column.Inputs[Derived Column Input].Columns[date_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="date_id"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[date_id]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Derived Column.Inputs[Derived Column Input].Columns[compagnie_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="compagnie_id"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[compagnie_id]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Derived Column.Inputs[Derived Column Input].Columns[severite_score]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="severite_score"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[severite_score]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Derived Column.Inputs[Derived Column Input].Columns[duree_immobilisation_h]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="duree_immobilisation_h"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[duree_immobilisation_h]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Derived Column.Inputs[Derived Column Input].Columns[cout_incident_usd]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cout_incident_usd"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[cout_incident_usd]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Derived Column.Inputs[Derived Column Input].Columns[nb_passagers_affectes]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="nb_passagers_affectes"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[nb_passagers_affectes]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Derived Column.Inputs[Derived Column Input].Columns[resolu]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="resolu"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[resolu]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Derived Column.Inputs[Derived Column Input].Columns[aeroport_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="aeroport_id"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[aeroport_id]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\Derived Column.Inputs[Derived Column Input].Columns[type_incident_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="type_incident_id"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[type_incident_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Fact_incident\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[incident_id_clean]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[incident_id_clean]"
+                      name="incident_id_clean"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[incident_id]}) ? NULL(DT_I4) : (DT_I4)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[incident_id]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(incident_id) ? NULL(DT_I4) : (DT_I4)incident_id</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[date_id_clean]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[date_id_clean]"
+                      name="date_id_clean"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[date_id]}) || [LEN]([TRIM](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[date_id]})) == 0 ? NULL(DT_I4) : (DT_I4)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[date_id]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(date_id) || LEN(TRIM(date_id)) == 0 ? NULL(DT_I4) : (DT_I4)date_id</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[compagnie_id_clean]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[compagnie_id_clean]"
+                      name="compagnie_id_clean"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[compagnie_id]}) || [LEN]([TRIM](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[compagnie_id]})) == 0 ? NULL(DT_I4) : (DT_I4)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[compagnie_id]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(compagnie_id) || LEN(TRIM(compagnie_id)) == 0 ? NULL(DT_I4) : (DT_I4)compagnie_id</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[severite_clean]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[severite_clean]"
+                      name="severite_clean"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[severite_score]}) ? NULL(DT_I4) : (DT_I4)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[severite_score]} &lt; 1 || (DT_I4)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[severite_score]} &gt; 5 ? NULL(DT_I4) : (DT_I4)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[severite_score]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(severite_score) ? NULL(DT_I4) : (DT_I4)severite_score &lt; 1 || (DT_I4)severite_score &gt; 5 ? NULL(DT_I4) : (DT_I4)severite_score</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[duree_clean]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[duree_clean]"
+                      name="duree_clean"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[duree_immobilisation_h]}) || [LEN]([TRIM](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[duree_immobilisation_h]})) == 0 || [TRIM](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[duree_immobilisation_h]}) == "-" || [TRIM](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[duree_immobilisation_h]}) == "N/A" || [TRIM](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[duree_immobilisation_h]}) == "NULL" ? NULL(DT_R8) : (DT_R8)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[duree_immobilisation_h]} &lt; 0 ? NULL(DT_R8) : (DT_R8)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[duree_immobilisation_h]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(duree_immobilisation_h) || LEN(TRIM(duree_immobilisation_h)) == 0 || TRIM(duree_immobilisation_h) == "-" || TRIM(duree_immobilisation_h) == "N/A" || TRIM(duree_immobilisation_h) == "NULL" ? NULL(DT_R8) : (DT_R8)duree_immobilisation_h &lt; 0 ? NULL(DT_R8) : (DT_R8)duree_immobilisation_h</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[cout_clean]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[cout_clean]"
+                      name="cout_clean"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[cout_incident_usd]}) || [LEN]([TRIM](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[cout_incident_usd]})) == 0 || [TRIM](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[cout_incident_usd]}) == "-" || [TRIM](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[cout_incident_usd]}) == "N/A" || [TRIM](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[cout_incident_usd]}) == "NULL" ? NULL(DT_R8) : (DT_R8)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[cout_incident_usd]} &lt; 0 ? NULL(DT_R8) : (DT_R8)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[cout_incident_usd]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(cout_incident_usd) || LEN(TRIM(cout_incident_usd)) == 0 || TRIM(cout_incident_usd) == "-" || TRIM(cout_incident_usd) == "N/A" || TRIM(cout_incident_usd) == "NULL" ? NULL(DT_R8) : (DT_R8)cout_incident_usd &lt; 0 ? NULL(DT_R8) : (DT_R8)cout_incident_usd</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[nb_passagers_clean]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[nb_passagers_clean]"
+                      name="nb_passagers_clean"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[nb_passagers_affectes]}) || [LEN]([TRIM](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[nb_passagers_affectes]})) == 0 ? NULL(DT_I4) : (DT_I4)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[nb_passagers_affectes]} &lt; 0 ? 0 : (DT_I4)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[nb_passagers_affectes]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(nb_passagers_affectes) || LEN(TRIM(nb_passagers_affectes)) == 0 ? NULL(DT_I4) : (DT_I4)nb_passagers_affectes &lt; 0 ? 0 : (DT_I4)nb_passagers_affectes</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[resolu_clean]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[resolu_clean]"
+                      name="resolu_clean"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[resolu]}) || [LEN]([TRIM](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[resolu]})) == 0 ? (DT_BOOL) FALSE  : (DT_BOOL)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[resolu]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(resolu) || LEN(TRIM(resolu)) == 0 ? (DT_BOOL) FALSE  : (DT_BOOL)resolu</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[aeroport_id_clean]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[aeroport_id_clean]"
+                      name="aeroport_id_clean"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[aeroport_id]}) || [LEN]([TRIM](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[aeroport_id]})) == 0 ? NULL(DT_I4) : (DT_I4)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[aeroport_id]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(aeroport_id) || LEN(TRIM(aeroport_id)) == 0 ? NULL(DT_I4) : (DT_I4)aeroport_id</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[type_incident_id_clean]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[type_incident_id_clean]"
+                      name="type_incident_id_clean"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[type_incident_id]}) || [LEN]([TRIM](#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[type_incident_id]})) == 0 ? NULL(DT_I4) : (DT_I4)#{Package\Fact_incident\Sort.Outputs[Sort Output].Columns[type_incident_id]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(type_incident_id) || LEN(TRIM(type_incident_id)) == 0 ? NULL(DT_I4) : (DT_I4)type_incident_id</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fact_incident\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Fact_incident\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fact_incident\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fact_incident\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fact_incident\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File InputFact_incident]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File InputFact_incident]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[incident_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[incident_id]"
+                      length="50"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[incident_id]"
+                      name="incident_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[date_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[date_id]"
+                      length="50"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[date_id]"
+                      name="date_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[compagnie_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[compagnie_id]"
+                      length="50"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[compagnie_id]"
+                      name="compagnie_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[aeroport_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[aeroport_id]"
+                      length="50"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[aeroport_id]"
+                      name="aeroport_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[type_incident_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[type_incident_id]"
+                      length="50"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[type_incident_id]"
+                      name="type_incident_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[severite_score]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[severite_score]"
+                      length="50"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[severite_score]"
+                      name="severite_score"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[duree_immobilisation_h]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[duree_immobilisation_h]"
+                      length="50"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[duree_immobilisation_h]"
+                      name="duree_immobilisation_h"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[cout_incident_usd]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cout_incident_usd]"
+                      length="50"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[cout_incident_usd]"
+                      name="cout_incident_usd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[nb_passagers_affectes]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[nb_passagers_affectes]"
+                      length="50"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[nb_passagers_affectes]"
+                      name="nb_passagers_affectes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[resolu]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[resolu]"
+                      length="50"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[resolu]"
+                      name="resolu"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[incident_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="incident_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[date_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="date_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[compagnie_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="compagnie_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[aeroport_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="aeroport_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[type_incident_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="type_incident_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[severite_score]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="severite_score" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[duree_immobilisation_h]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="duree_immobilisation_h" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cout_incident_usd]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="cout_incident_usd" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[nb_passagers_affectes]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="nb_passagers_affectes" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[resolu]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="resolu" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fact_incident\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Compagnie]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Compagnie]) [refTable]
+where [refTable].[compagnie_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="compagnie_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nom" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="code_IATA" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="alliance" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="pays_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="taille_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[compagnie_id_clean]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fact_incident\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fact_incident\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fact_incident\Lookup.Inputs[Lookup Input].Columns[compagnie_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="compagnie_id_clean"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[compagnie_id_clean]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">compagnie_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fact_incident\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="RedirectRow"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Fact_incident\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\Lookup.Outputs[Lookup Match Output].Columns[compagnie_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Fact_incident\Lookup.Outputs[Lookup Match Output].Columns[compagnie_id]"
+                      name="compagnie_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">compagnie_id</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fact_incident\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Fact_incident\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fact_incident\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Fact_incident\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fact_incident\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fact_incident\Lookup 1"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup 1"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Aeroport]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Aeroport]) [refTable]
+where [refTable].[aeroport_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="aeroport_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nom" dataType="DT_WSTR" length="150" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="code_IATA" dataType="DT_WSTR" length="5" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ville" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="latitude" dataType="DT_NUMERIC" length="0" precision="9" scale="6" codePage="0"/&gt;&lt;referenceColumn name="longitude" dataType="DT_NUMERIC" length="0" precision="9" scale="6" codePage="0"/&gt;&lt;referenceColumn name="pays_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="taille_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[aeroport_id_clean]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fact_incident\Lookup 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fact_incident\Lookup 1.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fact_incident\Lookup 1.Inputs[Lookup Input].Columns[aeroport_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="aeroport_id_clean"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[aeroport_id_clean]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">aeroport_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fact_incident\Lookup 1.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Fact_incident\Lookup 1.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\Lookup 1.Outputs[Lookup Match Output].Columns[aeroport_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Fact_incident\Lookup 1.Outputs[Lookup Match Output].Columns[aeroport_id]"
+                      name="aeroport_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">aeroport_id</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fact_incident\Lookup 1.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Fact_incident\Lookup 1.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fact_incident\Lookup 1.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Fact_incident\Lookup 1.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fact_incident\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fact_incident\Lookup 2"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup 2"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[TypeIncident]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[TypeIncident]) [refTable]
+where [refTable].[type_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="type_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="libelle" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="categorie" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="gravite_max" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[type_incident_id_clean]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fact_incident\Lookup 2.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fact_incident\Lookup 2.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fact_incident\Lookup 2.Inputs[Lookup Input].Columns[type_incident_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="type_incident_id_clean"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[type_incident_id_clean]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">type_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fact_incident\Lookup 2.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Fact_incident\Lookup 2.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\Lookup 2.Outputs[Lookup Match Output].Columns[type_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Fact_incident\Lookup 2.Outputs[Lookup Match Output].Columns[type_id]"
+                      name="type_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">type_id</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fact_incident\Lookup 2.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Fact_incident\Lookup 2.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fact_incident\Lookup 2.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Fact_incident\Lookup 2.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fact_incident\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fact_incident\Lookup 3"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup 3"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Temps]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Temps]) [refTable]
+where [refTable].[date_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="date_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="date_complete" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="jour" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="mois" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="trimestre" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="annee" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="jour_semaine" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="est_weekend" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="saison" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[date_id_clean]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fact_incident\Lookup 3.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fact_incident\Lookup 3.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fact_incident\Lookup 3.Inputs[Lookup Input].Columns[date_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="date_id_clean"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[date_id_clean]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">date_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fact_incident\Lookup 3.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Fact_incident\Lookup 3.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\Lookup 3.Outputs[Lookup Match Output].Columns[date_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Fact_incident\Lookup 3.Outputs[Lookup Match Output].Columns[date_id]"
+                      name="date_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">date_id</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fact_incident\Lookup 3.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Fact_incident\Lookup 3.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fact_incident\Lookup 3.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Fact_incident\Lookup 3.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\Lookup 3.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\Lookup 3.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fact_incident\Lookup 3.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\Lookup 3.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fact_incident\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[FACT_Incident]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fact_incident\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMINE\MSSQLSERVER1.AirSense.SA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[aeroport_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="aeroport_id_clean"
+                      externalMetadataColumnId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[aeroport_id]"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[aeroport_id_clean]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[incident_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="incident_id_clean"
+                      externalMetadataColumnId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[incident_id]"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[incident_id_clean]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[date_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="date_id_clean"
+                      externalMetadataColumnId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date_id]"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[date_id_clean]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[compagnie_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="compagnie_id_clean"
+                      externalMetadataColumnId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[compagnie_id]"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[compagnie_id_clean]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[type_incident_id_clean]"
+                      cachedDataType="i4"
+                      cachedName="type_incident_id_clean"
+                      externalMetadataColumnId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[type_incident_id]"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[type_incident_id_clean]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[severite_clean]"
+                      cachedDataType="i4"
+                      cachedName="severite_clean"
+                      externalMetadataColumnId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[severite_score]"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[severite_clean]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[duree_clean]"
+                      cachedDataType="r8"
+                      cachedName="duree_clean"
+                      externalMetadataColumnId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[duree_immobilisation_h]"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[duree_clean]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cout_clean]"
+                      cachedDataType="r8"
+                      cachedName="cout_clean"
+                      externalMetadataColumnId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cout_incident_usd]"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[cout_clean]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[nb_passagers_clean]"
+                      cachedDataType="i4"
+                      cachedName="nb_passagers_clean"
+                      externalMetadataColumnId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nb_passagers_affectes]"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[nb_passagers_clean]" />
+                    <inputColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[resolu_clean]"
+                      cachedDataType="bool"
+                      cachedName="resolu_clean"
+                      externalMetadataColumnId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[resolu]"
+                      lineageId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output].Columns[resolu_clean]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[aeroport_id]"
+                      dataType="i4"
+                      name="aeroport_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[incident_id]"
+                      dataType="i4"
+                      name="incident_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date_id]"
+                      dataType="i4"
+                      name="date_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[compagnie_id]"
+                      dataType="i4"
+                      name="compagnie_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[type_incident_id]"
+                      dataType="i4"
+                      name="type_incident_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[severite_score]"
+                      dataType="i4"
+                      name="severite_score" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[duree_immobilisation_h]"
+                      dataType="r8"
+                      name="duree_immobilisation_h" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cout_incident_usd]"
+                      dataType="r8"
+                      name="cout_incident_usd" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nb_passagers_affectes]"
+                      dataType="i4"
+                      name="nb_passagers_affectes" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[resolu]"
+                      dataType="bool"
+                      name="resolu" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fact_incident\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fact_incident\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fact_incident\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fact_incident\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Fact_incident\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fact_incident\Sort.Inputs[Sort Input].Columns[incident_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="incident_id"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[incident_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fact_incident\Sort.Inputs[Sort Input].Columns[date_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="date_id"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[date_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fact_incident\Sort.Inputs[Sort Input].Columns[compagnie_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="compagnie_id"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[compagnie_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fact_incident\Sort.Inputs[Sort Input].Columns[aeroport_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="aeroport_id"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[aeroport_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fact_incident\Sort.Inputs[Sort Input].Columns[type_incident_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="type_incident_id"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[type_incident_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fact_incident\Sort.Inputs[Sort Input].Columns[severite_score]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="severite_score"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[severite_score]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fact_incident\Sort.Inputs[Sort Input].Columns[duree_immobilisation_h]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="duree_immobilisation_h"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[duree_immobilisation_h]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fact_incident\Sort.Inputs[Sort Input].Columns[cout_incident_usd]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cout_incident_usd"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[cout_incident_usd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fact_incident\Sort.Inputs[Sort Input].Columns[nb_passagers_affectes]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="nb_passagers_affectes"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[nb_passagers_affectes]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fact_incident\Sort.Inputs[Sort Input].Columns[resolu]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="resolu"
+                      lineageId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[resolu]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fact_incident\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[incident_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[incident_id]"
+                      name="incident_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[incident_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[date_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[date_id]"
+                      name="date_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[date_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[compagnie_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[compagnie_id]"
+                      name="compagnie_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[compagnie_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[aeroport_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[aeroport_id]"
+                      name="aeroport_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[aeroport_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[type_incident_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[type_incident_id]"
+                      name="type_incident_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[type_incident_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[severite_score]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[severite_score]"
+                      name="severite_score">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[severite_score]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[duree_immobilisation_h]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[duree_immobilisation_h]"
+                      name="duree_immobilisation_h">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[duree_immobilisation_h]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[cout_incident_usd]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[cout_incident_usd]"
+                      name="cout_incident_usd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[cout_incident_usd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[nb_passagers_affectes]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[nb_passagers_affectes]"
+                      name="nb_passagers_affectes">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[nb_passagers_affectes]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[resolu]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fact_incident\Sort.Outputs[Sort Output].Columns[resolu]"
+                      name="resolu">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output].Columns[resolu]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Fact_incident.Paths[Derived Column Output]"
+              endId="Package\Fact_incident\Conditional Split.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\Fact_incident\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Fact_incident.Paths[Flat File Source Output]"
+              endId="Package\Fact_incident\Sort.Inputs[Sort Input]"
+              name="Flat File Source Output"
+              startId="Package\Fact_incident\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Fact_incident.Paths[Lignes_valides]"
+              endId="Package\Fact_incident\Lookup.Inputs[Lookup Input]"
+              name="Lignes_valides"
+              startId="Package\Fact_incident\Conditional Split.Outputs[Lignes_valides]" />
+            <path
+              refId="Package\Fact_incident.Paths[Lookup Match Output]"
+              endId="Package\Fact_incident\Lookup 1.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Fact_incident\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fact_incident.Paths[Lookup Match Output1]"
+              endId="Package\Fact_incident\Lookup 2.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Fact_incident\Lookup 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fact_incident.Paths[Lookup Match Output2]"
+              endId="Package\Fact_incident\Lookup 3.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Fact_incident\Lookup 2.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fact_incident.Paths[Lookup Match Output3]"
+              endId="Package\Fact_incident\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Fact_incident\Lookup 3.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fact_incident.Paths[Sort Output]"
+              endId="Package\Fact_incident\Derived Column.Inputs[Derived Column Input]"
+              name="Sort Output"
+              startId="Package\Fact_incident\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150,42.6666666666667"
+          Id="Package\Fact_incident"
+          TopLeft="366.124978688236,170.599997210502" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Fact_incident">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="151.333333333334,41.3333333333334"
+          Id="Package\Fact_incident\Flat File Source"
+          TopLeft="511.666638710434,30.3333331223991" />
+        <NodeLayout
+          Size="97.3333333333334,41.3333333333334"
+          Id="Package\Fact_incident\Sort"
+          TopLeft="538.333303920098,129.999999095996" />
+        <NodeLayout
+          Size="112.666666666667,41.3333333333334"
+          Id="Package\Fact_incident\Lookup"
+          TopLeft="559.374969437099,430.083330342588" />
+        <NodeLayout
+          Size="120.666666666667,41.3333333333334"
+          Id="Package\Fact_incident\Lookup 2"
+          TopLeft="831.249954582505,645.666662176781" />
+        <NodeLayout
+          Size="171.333333333334,41.3333333333334"
+          Id="Package\Fact_incident\OLE DB Destination"
+          TopLeft="505.208305729968,762.666661363178" />
+        <NodeLayout
+          Size="120.666666666667,41.3333333333334"
+          Id="Package\Fact_incident\Lookup 3"
+          TopLeft="545.083303851801,665.249995412181" />
+        <NodeLayout
+          Size="120.666666666667,41.3333333333334"
+          Id="Package\Fact_incident\Lookup 1"
+          TopLeft="781.249957314384,515.666663080785" />
+        <NodeLayout
+          Size="152.666666666667,41.3333333333334"
+          Id="Package\Fact_incident\Derived Column"
+          TopLeft="520.833304876256,217.533331820634" />
+        <NodeLayout
+          Size="153.333333333334,41.3333333333334"
+          Id="Package\Fact_incident\Conditional Split"
+          TopLeft="517.999971998236,308.833331223991" />
+        <EdgeLayout
+          Id="Package\Fact_incident.Paths[Sort Output]"
+          TopLeft="587.133303920098,171.599999095996">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.1000009561578,45.9333327246375"
+              Start="0,0"
+              End="10.1000009561578,38.4333327246375">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.9666663623187" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.9666663623187"
+                    Point2="0,22.9666663623187"
+                    Point3="4,22.9666663623187" />
+                  <mssgle:LineSegment
+                    End="6.10000095615783,22.9666663623187" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.10000095615783,22.9666663623187"
+                    Point2="10.1000009561578,22.9666663623187"
+                    Point3="10.1000009561578,26.9666663623187" />
+                  <mssgle:LineSegment
+                    End="10.1000009561578,38.4333327246375" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact_incident.Paths[Lookup Match Output3]"
+          TopLeft="605.483303851801,706.849995412181">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-14.6749981218328,55.8166659509969"
+              Start="0,0"
+              End="-14.6749981218328,48.3166659509969">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.9083329754985" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.9083329754985"
+                    Point2="0,27.9083329754985"
+                    Point3="-4,27.9083329754985" />
+                  <mssgle:LineSegment
+                    End="-10.6749981218328,27.9083329754985" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-10.6749981218328,27.9083329754985"
+                    Point2="-14.6749981218328,27.9083329754985"
+                    Point3="-14.6749981218328,31.9083329754985" />
+                  <mssgle:LineSegment
+                    End="-14.6749981218328,48.3166659509969" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.5288857796664,32.9083329754985,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact_incident.Paths[Lookup Match Output2]"
+          TopLeft="831.249954582505,666.466662176781">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-165.366650730704,19.5833332353996"
+              Start="0,0"
+              End="-157.866650730704,19.5833332353996">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-78.6833253653518,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-78.6833253653518,0"
+                    Point2="-82.6833253653518,0"
+                    Point3="-82.6833253653518,4" />
+                  <mssgle:LineSegment
+                    End="-82.6833253653518,15.5833332353996" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-82.6833253653518,15.5833332353996"
+                    Point2="-82.6833253653518,19.5833332353996"
+                    Point3="-86.6833253653518,19.5833332353996" />
+                  <mssgle:LineSegment
+                    End="-157.866650730704,19.5833332353996" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-130.874712084102,-17.609375,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact_incident.Paths[Lookup Match Output1]"
+          TopLeft="841.649957314384,557.266663080785">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.9999972681206,88.3999990959962"
+              Start="0,0"
+              End="49.9999972681206,80.8999990959962">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.1999995479981" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.1999995479981"
+                    Point2="0,44.1999995479981"
+                    Point3="4,44.1999995479981" />
+                  <mssgle:LineSegment
+                    End="45.9999972681206,44.1999995479981" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.9999972681206,44.1999995479981"
+                    Point2="49.9999972681206,44.1999995479981"
+                    Point3="49.9999972681206,48.1999995479981" />
+                  <mssgle:LineSegment
+                    End="49.9999972681206,80.8999990959962" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-23.1913880846897,49.1999995479981,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact_incident.Paths[Lookup Match Output]"
+          TopLeft="615.774969437099,471.683330342588">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="225.874987877285,43.9833327381975"
+              Start="0,0"
+              End="225.874987877285,36.4833327381975">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.9916663690987" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.9916663690987"
+                    Point2="0,21.9916663690987"
+                    Point3="4,21.9916663690987" />
+                  <mssgle:LineSegment
+                    End="221.874987877285,21.9916663690987" />
+                  <mssgle:CubicBezierSegment
+                    Point1="221.874987877285,21.9916663690987"
+                    Point2="225.874987877285,21.9916663690987"
+                    Point3="225.874987877285,25.9916663690987" />
+                  <mssgle:LineSegment
+                    End="225.874987877285,36.4833327381975" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="64.7461072198925,26.9916663690987,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact_incident.Paths[Lignes_valides]"
+          TopLeft="594.799971998236,350.433331223991">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.9749974388632,79.6499991185963"
+              Start="0,0"
+              End="20.9749974388632,72.1499991185963">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.8249995592981" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.8249995592981"
+                    Point2="0,39.8249995592981"
+                    Point3="4,39.8249995592981" />
+                  <mssgle:LineSegment
+                    End="16.9749974388632,39.8249995592981" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.9749974388632,39.8249995592981"
+                    Point2="20.9749974388632,39.8249995592981"
+                    Point3="20.9749974388632,43.8249995592981" />
+                  <mssgle:LineSegment
+                    End="20.9749974388632,72.1499991185963" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-21.8600794055684,44.8249995592981,64.69515625,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact_incident.Paths[Flat File Source Output]"
+          TopLeft="587.199971315266,71.9333331223991">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.0666659735971"
+              Start="0,0"
+              End="0,50.5666659735971">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5666659735971" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact_incident.Paths[Derived Column Output]"
+          TopLeft="596.016638437246,259.133331820634">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.6999994033575"
+              Start="0,0"
+              End="0,42.1999994033575">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.1999994033575" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact_incident\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Compagnie]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact_incident\Lookup 2">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[TypeIncident]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact_incident\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact_incident\Lookup 3">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Temps]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact_incident\Lookup 1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Aeroport]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

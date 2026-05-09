@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36705.20 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "AirSenseCube", "AirSenseCube\AirSenseCube.dwproj", "{F0E936C2-DC38-08E9-A401-0BBF98426A74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0E936C2-DC38-08E9-A401-0BBF98426A74}.Development|Default.ActiveCfg = Development
+		{F0E936C2-DC38-08E9-A401-0BBF98426A74}.Development|Default.Build.0 = Development
+		{F0E936C2-DC38-08E9-A401-0BBF98426A74}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B738CE75-2320-4AB3-86F5-E2F3FF16F080}
+	EndGlobalSection
+EndGlobal

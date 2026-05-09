@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>AirSenseCube</Database>
+    <Server>AMINE\MSSQLSERVER1</Server>
+    <ConnectionString>Data Source=AMINE\MSSQLSERVER1;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>3RrOcUtxPNu4BaGDAinCugLLg54=4/4/2026 10:09:08 PM3/24/2026 11:08:17 PM</TimeStamp>
+        <ID>
+          <String>AirSense</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>R8eag+YAAOpPzplTp0N0JkJuTW4=3/24/2026 11:09:20 PM3/24/2026 11:09:19 PM</TimeStamp>
+        <ID>
+          <String>AirSense</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>tJFTgNb7eySDDumv8ctODQKi3jI=5/1/2026 1:09:58 PM3/24/2026 11:33:22 PM</TimeStamp>
+        <ID>
+          <String>Type Incident</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>1fZgTFGL5bN0SlR0G4SV4VP/cz8=5/1/2026 1:11:58 PM3/24/2026 11:33:22 PM</TimeStamp>
+        <ID>
+          <String>Temps</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>dX/UBhflB2wEztXeJHnfYnIkW/Y=5/1/2026 1:12:19 PM3/24/2026 11:33:22 PM</TimeStamp>
+        <ID>
+          <String>Compagnie</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>vA6CJyaxzZHRTnHoyhOSPB0OFL0=5/1/2026 1:12:43 PM3/24/2026 11:33:22 PM</TimeStamp>
+        <ID>
+          <String>Aeroport</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>nN4eWcxKrqrJdE/RfuLlbqMjA1c=5/1/2026 1:12:51 PM3/24/2026 11:33:22 PM</TimeStamp>
+        <ID>
+          <String>Meteo</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>M9CMan4L7uiBd/AdOgBRG5ztS10=5/1/2026 1:17:22 PM3/24/2026 11:33:22 PM</TimeStamp>
+        <ID>
+          <String>Cause Retard</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>ImdgByUxSIcYUa+md26qKWm5nAE=5/1/2026 11:27:07 AM3/24/2026 11:33:22 PMf2J4recyC8OswzXwZwBjKFveec4=3/25/2026 12:24:20 AM3/24/2026 11:33:22 PM</TimeStamp>
+        <ID>
+          <String>AirSense</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>dLOAZIcibi37FTFWEJBhn7fNFbU=3/24/2026 11:01:45 PM3/24/2026 11:01:45 PM</TimeStamp>
+      <ID>
+        <String>AirSenseCube</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2026-05-01T12:18:18.943333Z</LastDeployed>
+</DeploymentSnapshot>

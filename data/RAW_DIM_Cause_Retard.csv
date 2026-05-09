@@ -1,0 +1,9 @@
+cause_id,categorie,code
+1,Météo,WEATHER
+2,Retard compagnie,CARRIER
+3,Contrôle aérien NAS,NAS
+4,Sécurité,SECURITY
+5,Avion en retard,LATE_AIRCRAFT
+6,Problème technique,TECHNICAL
+7,Grève personnel,STRIKE
+8,Surréservation,OVERBOOKING
